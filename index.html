@@ -1,80 +1,295 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Continuum Facility Services</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      text-align: center;
-    }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
+1 of 76
+New site
+External
+Inbox
+Summarize this email
 
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-      color: #e2e8f0;
-    }
+Shayla Liggins
+3:18 PM (1 minute ago)
+to me
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: white;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 16px;
-    }
+export default function ContinuumFacilityServicesWebsite() { const isThankYou = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("submitted") === "true";
 
-    .btn:hover {
-      opacity: 0.9;
-    }
+return ( <div className="min-h-screen bg-white text-slate-900"> <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur"> <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"> <a href="#top" className="flex items-center gap-3"> <div className="flex items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm p-1"> <img src="/logo.png" alt="Continuum Logo" className="h-10 w-auto object-contain" /> </div> </div> <div> <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Memphis, Tennessee</p> <h1 className="text-lg font-black tracking-tight">Continuum Facility Services</h1> </div> </a>
 
-    .contact {
-      margin-top: 40px;
-      font-size: 18px;
-      color: #cbd5e1;
-    }
+<nav className="hidden items-center gap-7 md:flex">
+        <a href="#services" className="text-sm font-medium text-slate-700 transition hover:text-slate-950">Services</a>
+        <a href="#process" className="text-sm font-medium text-slate-700 transition hover:text-slate-950">Process</a>
+        <a href="#gallery" className="text-sm font-medium text-slate-700 transition hover:text-slate-950">Results</a>
+        <a href="#about" className="text-sm font-medium text-slate-700 transition hover:text-slate-950">About</a>
+        <a href="#contact" className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-    .services {
-      margin-top: 50px;
-      font-size: 18px;
-      color: #f8fafc;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Continuum Facility Services</h1>
-    <p>Professional Facility Cleaning • Apartment Turnovers • Post-Construction Cleaning</p>
+  {isThankYou && (
+    <section className="border-b border-emerald-200 bg-emerald-50">
+      <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+        <p className="text-sm font-semibold text-emerald-800">Thank you — your request was sent successfully. We’ll review it and follow up soon.</p>
+      </div>
+    </section>
+  )}
 
-    <div class="services">
-      Serving Memphis, Tennessee and surrounding areas
+  <section id="top" className="relative overflow-hidden bg-slate-950 text-white">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_32%)]" />
+    <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
+      <div className="flex flex-col justify-center">
+        <div className="mb-5 inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 backdrop-blur">
+          Apartment Turnovers • Facility Cleaning • Post-Construction Cleanup
+        </div>
+        <h2 className="max-w-3xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
+          A polished cleaning company website built to win better clients.
+        </h2>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          Continuum Facility Services delivers professional cleaning support for apartments, commercial spaces, offices, and post-construction projects across Memphis and surrounding areas. Built for property managers, contractors, and owners who need clean presentation and dependable service.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#contact" className="rounded-full bg-white px-7 py-3.5 text-center text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-100">Get a Free Quote</a>
+          <a href="tel:9012099521" className="rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10">Call (901) 209-9521</a>
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          {[
+            ["Fast Turnarounds", "Built for unit readiness and quick scheduling."],
+            ["Professional Presence", "A polished vendor image that builds trust."],
+            ["Memphis Focused", "Local service for apartments, facilities, and projects."],
+          ].map(([title, text]) => (
+            <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+              <p className="text-sm font-semibold text-white">{title}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center">
+        <div className="w-full rounded-[2rem] border border-white/10 bg-white p-6 text-slate-900 shadow-2xl shadow-black/30">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              { title: "Apartment Turnovers", text: "Move-out cleans, make-ready presentation, and unit reset support." },
+              { title: "Post-Construction", text: "Dust removal, detail cleaning, and final presentation before handoff." },
+              { title: "Office Cleaning", text: "Clean lobbies, restrooms, breakrooms, and high-touch areas." },
+              { title: "Common Areas", text: "Hallways, amenity spaces, entries, and shared-property presentation." },
+            ].map((item, index) => (
+              <div key={item.title} className={`rounded-3xl p-5 ${index === 0 ? 'bg-slate-950 text-white' : 'bg-slate-50 ring-1 ring-slate-100'}`}>
+                <div className={`mb-4 h-2 w-16 rounded-full ${index === 0 ? 'bg-white' : 'bg-slate-950'}`} />
+                <h3 className="text-lg font-bold">{item.title}</h3>
+                <p className={`mt-3 text-sm leading-6 ${index === 0 ? 'text-slate-300' : 'text-slate-600'}`}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 rounded-3xl bg-slate-50 p-5 ring-1 ring-slate-100">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Why this site converts better</p>
+            <p className="mt-2 text-base leading-7 text-slate-700">Stronger messaging, clearer services, trust-building sections, and a direct quote form help turn website visitors into real leads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="border-b border-slate-200 bg-white">
+    <div className="mx-auto grid max-w-7xl gap-4 px-6 py-8 text-center sm:grid-cols-3 lg:px-8">
+      {[
+        ["Property Managers", "Turnovers, common areas, and vacant units"],
+        ["Contractors", "Post-construction cleanup and final-ready presentation"],
+        ["Business Owners", "Reliable cleaning for offices and facilities"],
+      ].map(([title, text]) => (
+        <div key={title} className="rounded-2xl bg-slate-50 px-5 py-4">
+          <p className="text-sm font-bold text-slate-950">{title}</p>
+          <p className="mt-1 text-sm text-slate-600">{text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="services" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div className="max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Our Services</p>
+      <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950">Service sections that make your business look established.</h3>
+      <p className="mt-5 text-lg leading-8 text-slate-600">This upgraded layout gives visitors a clear understanding of what you do, who you serve, and why they should contact you now.</p>
     </div>
 
-    <a class="btn" href="mailto:shayla@continuumfacilityservices.com">Request a Quote</a>
-
-    <div class="contact">
-      <p>Phone: (901) 209-9521</p>
-      <p>Email: shayla@continuumfacilityservices.com</p>
-      <p>Website launching now</p>
+    <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {[
+        { title: "Apartment Turnover Cleaning", text: "Detailed vacant unit cleaning designed to help properties get units move-in ready faster." },
+        { title: "Post-Construction Cleanup", text: "Fine dust removal, surface detail, debris cleanup, and presentation before final handoff." },
+        { title: "Office & Facility Cleaning", text: "Routine service for office spaces, restrooms, entries, shared areas, and administrative buildings." },
+        { title: "Deep Cleaning Projects", text: "One-time intensive cleaning for neglected spaces, resets, seasonal needs, and special requests." },
+      ].map((item) => (
+        <div key={item.title} className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-sm font-black text-white">C</div>
+          <h4 className="text-xl font-bold text-slate-950">{item.title}</h4>
+          <p className="mt-3 text-base leading-7 text-slate-600">{item.text}</p>
+        </div>
+      ))}
     </div>
-  </div>
-</body>
-</html>
+  </section>
+
+  <section id="process" className="bg-slate-50 py-20">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="max-w-2xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Simple Process</p>
+        <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950">A cleaner path from inquiry to service.</h3>
+      </div>
+      <div className="mt-12 grid gap-6 md:grid-cols-4">
+        {[
+          ["01", "Submit a Quote Request", "Tell us about your property, service needs, and timeline."],
+          ["02", "Receive a Response", "We review your request and follow up with next steps."],
+          ["03", "Schedule Service", "Appointments are arranged based on project needs and availability."],
+          ["04", "Get Professional Results", "Your space is cleaned with a focus on presentation and readiness."],
+        ].map(([num, title, text]) => (
+          <div key={num} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-black tracking-[0.2em] text-slate-400">{num}</p>
+            <h4 className="mt-4 text-xl font-bold text-slate-950">{title}</h4>
+            <p className="mt-3 text-base leading-7 text-slate-600">{text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Results Section</p>
+        <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950">A premium-looking section for before-and-after content.</h3>
+        <p className="mt-5 text-lg leading-8 text-slate-600">For launch, this section uses polished placeholders. Later, we can replace them with your real project photos, apartment turnovers, office cleaning shots, and post-construction images.</p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {[
+          "Before / After Unit Turnovers",
+          "Commercial & Office Cleaning",
+          "Common Area Presentation",
+          "Post-Construction Final Cleanup",
+        ].map((item, index) => (
+          <div key={item} className={`flex min-h-[180px] items-end rounded-[1.75rem] p-6 ${index % 2 === 0 ? 'bg-slate-950 text-white' : 'bg-slate-100 text-slate-950'}`}>
+            <p className="text-lg font-bold leading-7">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section className="bg-slate-950 py-20 text-white">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">Why Choose Us</p>
+          <h3 className="mt-3 text-4xl font-black tracking-tight">This upgrade makes your company feel more premium and trustworthy.</h3>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">A stronger website helps you look more established when property managers, contractors, and commercial clients check you out online. Clear services, cleaner structure, and better calls-to-action create a more serious first impression.</p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            "Clearer service descriptions",
+            "Better lead capture with a quote form",
+            "Stronger visual hierarchy and branding",
+            "Designed to look better on mobile screens",
+          ].map((item) => (
+            <div key={item} className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <p className="text-base font-medium leading-7 text-white">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 md:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">About Continuum Facility Services</p>
+        <h3 className="mt-3 text-3xl font-black tracking-tight text-slate-950">Built to serve properties that need clean presentation and dependable support.</h3>
+        <p className="mt-5 text-lg leading-8 text-slate-600">Continuum Facility Services is designed to support apartment communities, offices, and facilities with professional cleaning that helps spaces look ready, presentable, and well-maintained. Whether the need is a turnover, recurring service, or final cleanup, the priority stays the same: responsive communication and polished results.</p>
+      </div>
+
+      <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Service Area</p>
+        <h4 className="mt-3 text-2xl font-bold text-slate-950">Serving Memphis and surrounding areas</h4>
+        <div className="mt-6 space-y-4 text-slate-600">
+          <p>Available for apartment turnovers, office cleaning, facility cleaning, post-construction cleanup, and project-based service requests.</p>
+          <p><span className="font-semibold text-slate-950">Phone:</span> <a href="tel:9012099521" className="hover:underline">(901) 209-9521</a></p>
+          <p><span className="font-semibold text-slate-950">Email:</span> <a href="mailto:shayla@continuumfacilityservices.com" className="hover:underline">shayla@continuumfacilityservices.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" className="bg-slate-50 py-20">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Contact Us</p>
+          <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950">Request a quote directly from the website.</h3>
+          <p className="mt-5 max-w-lg text-lg leading-8 text-slate-600">This upgraded version replaces the simple mail link with a real quote request form. Visitors can submit their contact details and project info without needing Outlook, Gmail setup, or any separate email app.</p>
+          <div className="mt-8 rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-base font-semibold text-slate-950">Prefer to call?</p>
+            <a href="tel:9012099521" className="mt-2 block text-2xl font-black text-slate-950 hover:underline">(901) 209-9521</a>
+            <a href="mailto:shayla@continuumfacilityservices.com" className="mt-2 block text-slate-600 hover:text-slate-950 hover:underline">shayla@continuumfacilityservices.com</a>
+          </div>
+        </div>
+
+        <form action="https://formsubmit.co/shayla@continuumfacilityservices.com" method="POST" className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200">
+          <input type="hidden" name="_subject" value="New website quote request - Continuum Facility Services" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://www.continuumfacilityservices.com/?submitted=true" />
+
+          <div className="grid gap-5 md:grid-cols-2">
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-800">First Name</label>
+              <input name="first_name" required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950" />
+            </div>
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-800">Last Name</label>
+              <input name="last_name" required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950" />
+            </div>
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-800">Email</label>
+              <input type="email" name="email" required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950" />
+            </div>
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-800">Phone</label>
+              <input type="tel" name="phone" className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950" />
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <label className="mb-2 block text-sm font-semibold text-slate-800">Service Needed</label>
+            <select name="service_needed" className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950">
+              <option>Apartment Turnover Cleaning</option>
+              <option>Post-Construction Cleanup</option>
+              <option>Office / Facility Cleaning</option>
+              <option>Common Area Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div className="mt-5">
+            <label className="mb-2 block text-sm font-semibold text-slate-800">Property or Project Details</label>
+            <textarea name="message" rows={6} required placeholder="Tell us about the property, timeline, and services you need." className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-950" />
+          </div>
+
+          <button type="submit" className="mt-6 w-full rounded-full bg-slate-950 px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-slate-300 transition hover:-translate-y-0.5 hover:opacity-95">Send Quote Request</button>
+
+          <p className="mt-4 text-sm leading-6 text-slate-500">Form submissions are sent directly to the business inbox and provide a much smoother experience than a mailto link.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer className="border-t border-slate-200 bg-white">
+    <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between lg:px-8">
+      <p>© 2026 Continuum Facility Services. All rights reserved.</p>
+      <div className="flex flex-wrap gap-6">
+        <a href="mailto:shayla@continuumfacilityservices.com" className="hover:text-slate-950">shayla@continuumfacilityservices.com</a>
+        <a href="tel:9012099521" className="hover:text-slate-950">(901) 209-9521</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+); }
